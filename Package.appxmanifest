@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
+		 xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
+		 xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+	xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" 
+		 xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4" 
+		 xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10" 
+		 xmlns:mobile="http://schemas.microsoft.com/appx/manifest/mobile/windows10" 
+		 xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+		 IgnorableNamespaces="uap uap2 uap3 uap4 mp mobile iot rescap" 
+		 xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
+  <Identity Name="HololensResearchMode" Publisher="CN=DefaultCompany" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="4518de55-193b-4027-a16a-30a397d2a5e8" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>hololens_reseachMode</DisplayName>
+    <PublisherDisplayName>DefaultCompany</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.19041.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="HololensResearchMode.App">
+      <uap:VisualElements DisplayName="hololens_reseachMode" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Template_3D" BackgroundColor="transparent">
+        <uap:DefaultTile ShortName="hololens_reseachMode" Wide310x150Logo="Assets\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#FFFFFF" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape" />
+          <uap:Rotation Preference="landscapeFlipped" />
+          <uap:Rotation Preference="portrait" />
+          <uap:Rotation Preference="portraitFlipped" />
+        </uap:InitialRotationPreference>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+	<rescap:Capability Name="perceptionSensorsExperimental"/>
+    <Capability Name="internetClient" />
+    <uap2:Capability Name="spatialPerception" />
+	<DeviceCapability Name="webcam"/>
+    <DeviceCapability Name="microphone" />
+    <DeviceCapability Name="gazeinput" />
+	<DeviceCapability Name="backgroundSpatialPerception"/>
+  </Capabilities>
+</Package>
